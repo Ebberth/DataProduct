@@ -1,4 +1,5 @@
 library(shiny)
+library(markdown)
 
 shinyServer(function(input, output, session) {
 

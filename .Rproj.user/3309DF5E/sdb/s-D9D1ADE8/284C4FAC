@@ -1,0 +1,17 @@
+{
+    "contents" : "library(shiny)\nlibrary(markdown)\n\n# Define UI for application that plots random distributions \nshinyUI(pageWithSidebar(\n  \n  # Application title\n  headerPanel(\"Online Conversion - Temperature Conversion\"),\n  \n  # Sidebar with a slider input for number of observations\n  sidebarPanel(\n    sliderInput(\"temper\", \n                \"Temperature:\",\n                min = -1000,\n                max = 1000, \n                value = 0,\n                step = 0.5),\n\n    selectInput(\"tipo\",\n                \"Choose a kind of temperature conversion:\",\n                list(\"fahr_to_kelvin\" = \"f-k\", \n                     \"kelvin_to_celsius\" = \"k-c\", \n                     \"fahr_to_celsius\" = \"f-c\",\n                     \"celsius_to_fahr\" = \"c-f\"))\n    ),\n\n  mainPanel(\n    tabsetPanel(id = 'a', selected = '1',\n      tabPanel(p(icon(\"line-chart\"), \"Result\"),value = '1', h3(textOutput('previsto'))),\n      \n      tabPanel(p(icon(\"info-circle\"), \"Documentation\"), value = '2', includeMarkdown(\"README.md\")),\n      \n      tabPanel(p(icon(\"link\"), \"Links\"), value = '3',\n               h2(\"Links\"),\n               p(strong(em(\"Documentation:\",a(\"Online Conversion - Temperature Conversion\",href=\"README.html\")))),\n               p(strong(em(\"Github repository:\", \n                           a(\"Developing Data Products - Peer Assessment Project; Shiny App\",\n                           href=\"https://github.com/Ebberth/DataProduct\")))\n               ),\n               h2(\"Interesting Links\"),\n               p(strong(em(\"Wikipedia:\",a(\"Kelvin Scale\",href=\"https://en.wikipedia.org/wiki/Kelvin\")))),\n               p(strong(em(\"Wikipedia:\",a(\"Celsius Scale\",href=\"https://en.wikipedia.org/wiki/Celsius\")))),\n               p(strong(em(\"Wikipedia:\",a(\"Fahrenheit Scale\",href=\"https://en.wikipedia.org/wiki/Fahrenheit\")))),\n               p(strong(em(\"Wikipedia:\",a(\"Scale of temperature\",href=\"https://en.wikipedia.org/wiki/Scale_of_temperature\")))),\n               p(strong(em(\"Wikipedia:\",a(\"Temperature\",href=\"https://en.wikipedia.org/wiki/Temperature\")))),\n               p(strong(em(\"Wikipedia:\",a(\"Conversion of units of temperature\",href=\"https://en.wikipedia.org/wiki/Conversion_of_units_of_temperature\")))),\n               p(strong(em(\"Allmeasures:\",a(\"Temperature Conversion Table\",href=\"http://www.allmeasures.com/temperature.html\")))),\n               p(strong(em(\"Atmos:\",a(\"From fahrenheit to celsius to kelvin and back\",href=\"http://ww2010.atmos.uiuc.edu/(Gh)/guides/maps/ctof.rxml\"))))\n      )\n    )\n  )\n))\n\n",
+    "created" : 1453936280636.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1685604310",
+    "id" : "284C4FAC",
+    "lastKnownWriteTime" : 1453938195,
+    "path" : "~/Coursera/8 - Developing Data Products/Course Project/DataProduct/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
